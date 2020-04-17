@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card using JS</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="text/css">
+		body {
+			margin: 100px;
+		}
+
+
+		img{
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			padding:20px;
+		}
+		.card{
+			background-color:#d6cbd3 ;
+			display: inline-block; 
+			margin: 10px;
+		}
+		p{
+			padding:  40px;
+			font-size: 30px;
+			color: #33ccff;
+		}
+	</style>
+</head>
+<body>
+
+
+
+
+	<script type="text/javascript">
+
+		const salaryTable = {
+			ID: ["1" , "2" , "3","4"],
+			Name:["Maram","Afaf","Zaid","Eman"],
+			Salary:["500JD","600JD", "700JD" ,"300JD"],
+			Image:["<img src='maram.jpg'>",
+			"<img src='maram.jpg'>",
+			"<img src='maram.jpg'>",
+			"<img src='maram.jpg'>"]
+
+		}
+
+
+		var i = 0; 
+
+		for(var prop in salaryTable){
+            document.write('<div class="card" style="width: 18rem;">');
+			document.write(  salaryemployeee(prop , i) + "<br>");
+			i = i+1 ; 
+			document.write('</div>');
+		}
+
+
+		function salaryemployeee(prop , i) {
+			
+
+			document.write(salaryTable['Image'][i] + "<br>"); 
+			document.write("<p>");
+			document.write( "Name:  " + salaryTable['Name'][i] + "<br>");
+			document.write("Salary: " + salaryTable['Salary'][i] + "<br>");
+			document.write("</p>"); 
+			console.log(true);	
+
+		}
+
+</script>
+
+
+</body>
+</html>
